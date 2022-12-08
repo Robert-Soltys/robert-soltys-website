@@ -1,0 +1,226 @@
+/*Body and Everything Commands*/
+*{
+  color: white;
+  font-family: helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+p {
+  margin: 0px 0px;
+  line-height: 19px;
+}
+
+/*MOBIL FIRST Grid Template Area Commands*/
+body {
+  background-color: darkblue;
+  border: 0px solid red;
+  font-family: helvetica, sans-serif;
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-rows: 120px 178px calc(100vh - 375px) 85px 1fr 1fr;
+  grid-template-columns: 100%;
+  grid-template-areas:
+    " name   "
+    " portcat"
+    " banner "
+    " social "
+    " resume "
+    " about  ";
+}
+
+/*Grid Template Area Call Signs*/
+/*Name and Titles*/
+.name-title {
+  grid-area: name;
+}
+/*Portfolio Categories*/
+.portfolio-categories {
+  grid-area: portcat;
+}
+/*Portfolio Banner*/
+.banner-container {
+  grid-area: banner;
+}
+/*Social Media Links*/
+.social-media-links {
+  grid-area: social;
+}
+/*Resume Content*/
+.resume-content {
+  grid-area: resume;
+}
+/*About Page*/
+.about-page {
+  grid-area: about;
+}
+
+/*Name and Titles*/
+.name-title {
+  border: 0px solid red;
+  padding: 0px 0px 0px 0px;
+}
+h1 {
+  font-weight: 700;
+  margin: 0px 0px 1px 0px;
+}
+h2 {
+  margin: 0px 0px 2px 0px;
+}
+
+/*Portfolio Categories*/
+.portfolio-categories {
+  border: 0px solid red;
+  padding: 0px 0px 0px 0px;
+}
+h3 {
+  margin: 0px 0px 1px 0px;
+}
+
+/*Portfolio Banner*/
+.banner-container {
+  border: 0px solid red;
+  margin: 0px 0px 0px 0px;
+}
+.banner-property {
+  height: 100%;
+  background-color: darkblue;
+  margin: 0px 0px;
+  box-shadow: 0px 2px 8px black;
+}
+
+.banner-text {
+  color: darkblue;
+}
+
+/*Social Media Links*/
+.social-media-links {
+  border: 0px solid red;
+  padding: 0px 0px 0px 0px;
+}
+h4 {
+  margin: 0px 0px 1px 0px;
+}
+
+/*Resume Content*/
+
+.resume-title h5 {
+  margin: 50px 0px 30px 0px;
+}
+
+.resume-content {
+  border: 0px solid red;
+  margin: 0px 0px 0px 0px;
+}
+.resume-title {
+  padding: 0px 0px 0px 0px;
+}
+h6 {
+  margin: 0px 0px 6px 0px;
+}
+.awards {
+  margin: 0px 0px 30px 0px;
+}
+.associations {
+  margin: 0px 0px 30px 0px;
+}
+.design-jobs {
+  margin: 0px 0px 30px 0px;
+}
+.education {
+  margin: 0px 0px 30px 0px;
+}
+.skills {
+  margin: 0px 0px 0px 0px;
+}
+
+.resume-content p span {
+  display: inline-block;
+  transform: translateY(3px); 
+}
+
+.awards p {
+  text-decoration: none;
+  border-bottom: 1px solid white;
+  padding: 5px 0px 0px 0px;
+}
+
+.associations p {
+  text-decoration: none;
+  border-bottom: 1px solid white;
+  padding: 5px 0px 0px 0px;
+}
+.design-jobs p {
+  text-decoration: none;
+  border-bottom: 1px solid white;
+  padding: 5px 0px 0px 0px;
+}
+.education p {
+  text-decoration: none;
+  border-bottom: 1px solid white;
+  padding: 5px 0px 0px 0px;
+}
+.skills p {
+  text-decoration: none;
+  border-bottom: 1px solid white;
+  padding: 5px 0px 0px 0px;
+}
+
+/*About Page*/
+.about-page {
+  border: 0px solid red;
+  margin: 50px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+}
+.about-page h5 {
+  margin: 0px 0px 30px 0px;
+  padding: 0px 0px 0px 0px;
+}
+
+.about-content {
+  min-width: 200px;
+  max-width: 350px;
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+}
+
+/*Media Queries*/
+
+/*Tablet*/
+@media (min-width: 500px) and (max-width: 999px) {
+  body {
+    display: grid;
+    grid-template-rows: 120px 178px calc(100vh - 375px) 85px 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      " name        ...."
+      " portcat  ......."
+      " banner    banner"
+      " social    ......"
+      " resume    resume"
+      " ......     about";
+  }
+}
+
+/*Desktop*/
+@media (min-width: 1000px) {
+  body {
+    display: grid;
+    grid-template-rows: 120px 178px calc(100vh - 375px) 85px 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+      " name    ....   ....   ....   "
+      " portcat ....   ....   ....   "
+      " banner  banner banner banner "
+      " social  ....   ....   ....   "
+      " ....    resume resume ....   "
+      " ....    resume resume about  "
+      " ....    ....   ....   about  ";
+  }
+  .about-page {
+  border: 0px solid red;
+  margin: 300px 00px 0px 0px;
+  padding: 0px 40px 0px 35px;
+  /*max-width:;*/
+  }
+}
